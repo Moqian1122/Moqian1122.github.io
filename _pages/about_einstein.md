@@ -1,5 +1,7 @@
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+您好！Hello! Bonjour! Dag!
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am Moqian, a student studying Statistics and Data Science in KU Leuven, Belgium. Now I am pursuing my master degree and interning in the risk division of an internatioanlly well-known bank.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+My main academic and industrial interests are intersections of data science and commerce (business and finance). I studied, or am studying Financial Mathematics, Data Science for Business, Data Management, ,all of which collectively empower me
+
+On this personal website
