@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Reviving Proust: a hands-on journey of building an iconic toy AI-agent"
-date:   2025-08-02 15:55:01 +0100
+date:   2025-07-05 15:55:01 +0100
 categories: jekyll update
 ---
 
@@ -39,7 +39,7 @@ load_dotenv(override=True)
 OpenAI_API_KEY = os.getenv("OPENAI_API_KEY")
 </pre>
 
-Below is the most substantial part of the code file. Based on the principle of OOP, we would like to write a function so that it could be called in the Gradio framework. Any initialization of a chatbot requires three basic components: prompt, LLM, and parser. The chain could be expressed as 'promopt | model | parser'. The prompt serves as a background setting. Via 'ChatPromptTemplate' I tell the model what kind of a role and what output style this AI-agent should have. This is key as it shapes the unique style of the AI-agent. It should also provide instructions on how to understand the potential user input. With a 'placeholder', it's able to 'remember' the previous conversation so that it could reuse the information given before to give more related response.
+Below is the most substantial part of the code file. Based on the principle of OOP, we would like to write a function so that it could be called in the Gradio framework. Any initialization of a chatbot requires three basic components: prompt, LLM, and parser. The chain could be expressed as 'promopt \| model \| parser'. The prompt serves as a background setting. Via 'ChatPromptTemplate' I tell the model what kind of a role and what output style this AI-agent should have. This is key as it shapes the unique style of the AI-agent. It should also provide instructions on how to understand the potential user input. With a 'placeholder', it's able to 'remember' the previous conversation so that it could reuse the information given before to give more related response.
 
 The parser is to parse the output of the LLM into the form expected by the related users. For example, if an user expected a more structured output, we might want a JSON. We might also consider multiple chains. If we add another LLM model right after the JSON formot, it might already give some explanations about the result and even print it to a PDF file. That's how chain mechanisms are stronger.
 
