@@ -11,6 +11,8 @@ The goal of this post is to show how I built a toy AI-agent called 'Talk with Pr
 
 Marcel Proust (10 July 1871 – 18 November 1922) is one of the greatest French writers. His idiocyncratic writing style features a continuous, comforting murmuring where time goes in a non-linear way. The non-linearity, even though in conflicts with a forever forward-moving physical world, amazingly unveils humans' transcendental experience about time and memories. In Proust's world of rhetorics, time is a running stream while pieces of memories are swirls randomly floating on the surface. Therefore, it's nice to have an independent AI-agent to talk like Proust, talking with whom would give some literary aesthetic experience to users or Proust's fans.
 
+In this development, we will use OpenAI's o3-mini. To use any external LLM, its API key is required to be subscribed first. Once subscribed, a key should be put in the environment file '.env' in the same working directory. Gradio provides a framework combining frontend and backend. So we will develop an AI-agent chain with LangChain and embed it with Gradio.
+
 <pre>
 python 
 
@@ -23,23 +25,25 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain.chat_models import init_chat_model
 from langchain.agents import create_tool_calling_agent, AgentExecutor
 from langchain_core.output_parsers import StrOutputParser
+</pre>
+
+By the code below, we are able to read the OpenAI API key from the environment variable.
+
+<pre>
+python
 
 import os
 from dotenv import load_dotenv
 load_dotenv(override=True)
-</pre>
-
-
-
-
-
-<pre>
-python 
 
 OpenAI_API_KEY = os.getenv("OPENAI_API_KEY")
 </pre>
 
+Below is the most substantial part of the code file. Based on the principle of OOP, we would like to write a function so that it could be called in the Gradio framework. Any initialization of a chatbot requires three basic components: prompt, LLM, and parser. The chain could be expressed as 'promopt | model | parser'. The prompt serves as a background setting. Via 'ChatPromptTemplate' I tell the model what kind of a role and what output style this AI-agent should have. This is key as it shapes the unique style of the AI-agent. It should also provide instructions on how to understand the potential user input. With a 'placeholder', it's able to 'remember' the previous conversation so that it could reuse the information given before to give more related response.
 
+The parser is to parse the output of the LLM into the form expected by the related users. For example, if an user expected a more structured output, we might want a JSON. We might also consider multiple chains. If we add another LLM model right after the JSON formot, it might already give some explanations about the result and even print it to a PDF file. That's how chain mechanisms are stronger.
+
+By using the 'async def', it would return anything that is already out of the model instead of returning everything all at once. This is crucial when we want a smooth conversation flow effect.
 
 <pre>
 python 
@@ -63,7 +67,7 @@ async def chat(message: str, history: dict):
     yield response
 </pre>
 
-
+The Gradio block is responsible for layout controlling. CSS is essential here as it's about how the application would look like.
 
 <pre>
 python 
@@ -87,4 +91,12 @@ with gr.Blocks(css=css) as demo:
 demo.launch()
 </pre>
 
+Now the codes are finalized. With launch() method we are able to see the prototpye on premise. The prototype is shown as below.
+
 ![Initial state of 'Talk with Proust'](/assets/images/talk_with_proust_screenshot.png)
+
+Let's input a question and the dialogue result could be refered as below.
+
+![An example result from Talk with Proust'](/assets/images/talk_with_proust_result.png)
+
+Now here we go. Let's talk with Marcel Proust!
