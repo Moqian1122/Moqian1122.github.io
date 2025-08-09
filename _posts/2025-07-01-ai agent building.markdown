@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Reviving Proust: a hands-on journey of building an iconic toy AI-agent"
-date:   2025-07-05 15:55:01 +0100
+date:   2025-07-01 15:55:01 +0200
 categories: jekyll update
 ---
 
@@ -97,6 +97,6 @@ Now the codes are finalized. With launch() method we are able to see the prototp
 
 Let's input a question and the dialogue result could be refered as below.
 
-![An example result from Talk with Proust'](/assets/images/talk_with_proust_result.png)
+![An example result from 'Talk with Proust'](/assets/images/talk_with_proust_result.png)
 
 Now here we go. Let's talk with Marcel Proust!

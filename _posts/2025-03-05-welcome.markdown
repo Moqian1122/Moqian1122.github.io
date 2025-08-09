@@ -6,3 +6,7 @@ categories: jekyll update
 ---
 
 Hello! Welcome to my channel!
+
+My name is Moqian (墨千). I speak Mandarin and English and I have been learning French.
+
+As a brave person who ever changed the background from literature studies to technologies and their business applications, I am glad to share my learning experiences here. On this personal website, I post my learning outputs and personal thoughts. I am not a great statstician or mathematician. Having changed my backgound, I have much more to acquire compared to my intelligient and constantly self-evolving peers. With that said, hopefully these materials might help you know more about me :).
