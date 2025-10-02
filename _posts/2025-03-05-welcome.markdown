@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome"
 date:   2025-03-05 22:30:01 +0100
-categories: jekyll update
+categories: Welcome
 ---
 
 Hello! Welcome to my channel!

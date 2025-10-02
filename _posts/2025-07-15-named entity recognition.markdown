@@ -2,7 +2,7 @@
 layout: post
 title:  "A toy example implementing NER using spaCy"
 date:   2025-07-15 23:09:01 +0200
-categories: jekyll update
+categories: NLP, Entity Matching
 ---
 
 NLP (Natural Language Processing) is a vital topic in the advancement of AI. Inside this specific domain, NER (Named Entity Recognition) plays an important role in business analysis. NE (Named Entities) refers to what is called 'proper noun' in English. The word, "English", is already an NE as it represents a specific language or a specific ethic group. Of course, my name "Moqian" is an NE for a person. Intuitively, NE appears in the singular way with always an UPPERCASE of the first letter. In one word, NER is to find NEs from the target textual data. In my coursework slightly touching NLP, two mainstream tools, spaCy and NLTK have been introduced. This post uses sapCy to implement some simple tasks about NER. 

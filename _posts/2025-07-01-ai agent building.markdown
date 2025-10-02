@@ -2,7 +2,7 @@
 layout: post
 title:  "Reviving Proust: a hands-on journey of building an iconic toy AI-agent"
 date:   2025-07-01 15:55:01 +0200
-categories: jekyll update
+categories: Artificial Interlligence, AI Agent
 ---
 
 AI-agent is more useful in real production environments compared to general LLMs. Firstly, the customized external function calling makes AI-agents more specific to its purpose. Secondly, thanks to mechanisms like Retrieval Augmented Generation (RAG), AI-agents' knowledge is more specilised in a certain domain or a certain orgnization. Building specialised AI-agents based on open-sourced LLMs, therefore, is becoming a productive practice in firms and companies. LangChain is a professional and popular framework to build AI-agents leveraging APIs of mainstream LLMs (such as OpenAI, Gemini and DeepSeek), equipped with well-filed documentations and easily-understood prototyping workflow.
