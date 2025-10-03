@@ -99,8 +99,8 @@ The general standard deviation $\sigma$ and pixel-wise standard deviation $\sigm
 
 Which of the following preprocessing steps will not change the performance of a Nearest Neighbor classifier that uses L1 distance? Select all that apply. To clarify, both training and test examples are preprocessed in the same way.
 
-1. Subtracting the mean $\mu$ ($\tilde{p}_{ij}^{(k)}=p_{ij}^{(k)}-\mu$).
-2. Subtracting the per pixel mean $\mu_{ij}$  ($\tilde{p}_{ij}^{(k)}=p_{ij}^{(k)}-\mu_{ij}$.)
+1. Subtracting the mean $\mu$ ($$\tilde{p}_{ij}^{(k)} = p_{ij}^{(k)} - \mu$$).
+2. Subtracting the per pixel mean $\mu_{ij}$  ($$\tilde{p}_{ij}^{(k)}=p_{ij}^{(k)}-\mu_{ij}$$).
 3. Subtracting the mean $\mu$ and dividing by the standard deviation $\sigma$.
 4. Subtracting the pixel-wise mean $\mu_{ij}$ and dividing by the pixel-wise standard deviation $\sigma_{ij}$.
 5. Rotating the coordinate axes of the data, which means rotating all the images by the same angle. Empty regions in the image caused by rotation are padded with a same pixel value and no interpolation is performed.
