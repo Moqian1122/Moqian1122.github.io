@@ -76,6 +76,46 @@ By doing so, we could sum the input X and X_train separately alongside axis=1 to
 dists = np.absolute(np.sum(X, axis=1)[:,np.newaxis] - np.sum(self.X_train, axis=1)[:,np.newaxis].T)
 ```
 
+**Inline Question 1**
+
+Notice the structured patterns in the distance matrix, where some rows or columns are visibly brighter. (Note that with the default color scheme black indicates low distances while white indicates high distances.)
+
+- What in the data is the cause behind the distinctly bright rows?
+- What causes the columns?
+
+$\color{blue}{\textit My Answer:}$
+- The distinctly bright rows are instances from the test data that are far away from most of the remembered training cases. They're outliers in terms of the existing training data.
+- The distinctly bright columns are instances from the training data that are far away from most of the test instances.That indicates the training data also includes some "outliers" to try to consider more extreme situations.
+
+**Inline Question 2**
+
+We can also use other distance metrics such as L1 distance.
+For pixel values $p_{ij}^{(k)}$ at location $(i,j)$ of some image $I_k$,
+
+the mean $\mu$ across all pixels over all images is $$\mu=\frac{1}{nhw}\sum_{k=1}^n\sum_{i=1}^{h}\sum_{j=1}^{w}p_{ij}^{(k)}$$
+And the pixel-wise mean $\mu_{ij}$ across all images is
+$$\mu_{ij}=\frac{1}{n}\sum_{k=1}^np_{ij}^{(k)}.$$
+The general standard deviation $\sigma$ and pixel-wise standard deviation $\sigma_{ij}$ is defined similarly.
+
+Which of the following preprocessing steps will not change the performance of a Nearest Neighbor classifier that uses L1 distance? Select all that apply. To clarify, both training and test examples are preprocessed in the same way.
+
+1. Subtracting the mean $\mu$ ($\tilde{p}_{ij}^{(k)}=p_{ij}^{(k)}-\mu$.)
+2. Subtracting the per pixel mean $\mu_{ij}$  ($\tilde{p}_{ij}^{(k)}=p_{ij}^{(k)}-\mu_{ij}$.)
+3. Subtracting the mean $\mu$ and dividing by the standard deviation $\sigma$.
+4. Subtracting the pixel-wise mean $\mu_{ij}$ and dividing by the pixel-wise standard deviation $\sigma_{ij}$.
+5. Rotating the coordinate axes of the data, which means rotating all the images by the same angle. Empty regions in the image caused by rotation are padded with a same pixel value and no interpolation is performed.
+
+$\color{blue}{\textit My Answer:}$ 
+1, 2, 3
+
+$\color{blue}{\textit My Explanation:}$ 
+
+- 1 does not change the performance. As it does not affect the relative distances across all the image pairs since it subtracts the same constant $\mu$.
+- 2 does not change the performance. As it does not affect the relative distances across all the image pairs since it subtracts the same constant $\mu_{i,j}$ pixelwise. The distance is aggregated from pixelwise, thus not affected either.
+- 3 does not change the performance. As all the distances between image pairs are rescaled to the same degree, thus not changing the relative distances.
+- 4 changes the performance as $\sigma_{i,j}$ varies and it might change the relative distances between image pairs.
+- 5 changes the performance. Imagining in Manhattan distance a point A might need to go alongside x axis and then y axis to get to point B. Therefore, the distance between A and B will change if the orientation changes. L2 is invariant to rotations.
+
 The practice uses CIFAR-10 data set. 'CIFAR' represents Canadian Institute for Advanced Research. 10 refers to that the data set consist of 10 classes, represented by 0 to 9. It contains 60,000 images with 50,000 images as training data and 10,000 images as test data. Each image has 3,072 pixel values with the first 1,024 the red values, the middle 1,024 the green values and the last 1,024 the blue values. Each class has exactly 5,000 training images and exactly 1,000 test images.
 
 ![The preview of a subtle set of the pictures'](/assets/images/computer_vision_knn.png)
