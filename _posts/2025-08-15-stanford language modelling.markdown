@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Learning with Stanford 02: language modelling from scratch"
-date:   2025-08-015 23:09:01 +0200
+date:   2025-08-15 23:09:01 +0200
 categories: Artificial Intelligence
 ---
 
