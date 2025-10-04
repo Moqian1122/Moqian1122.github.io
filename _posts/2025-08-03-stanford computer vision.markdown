@@ -9,9 +9,13 @@ This is a starting point of a series that I have been always thinking to initial
 
 I start with [CS231n: Deep Learning for Computer Vision (Spring 2025)](https://cs231n.stanford.edu/) as Episode 01 for the whole 'Learning with Stanford' series. While I follow the latest assignments, the videos available online are from previous semesters.
 
-## Assignment 1: Image Classification, kNN, Softmax, Fully-Connected Neural Network, Fully-Connected Nets
+## Lecture notes ##
 
-### A kNN Classifier
+## Assignments ##
+
+### Assignment 1: Image Classification, kNN, Softmax, Fully-Connected Neural Network, Fully-Connected Nets ###
+
+#### A kNN Classifier ####
 
 k-Nearest-Neighbor (kNN) is a clustering machine learning method. Compared to other classifiers such as linear classifiers and support vector machines which really train models to fit on training data, a kNN is not really training a model but simply remembering all training data. Once a new data point enters, the kNN will compare this single point to all other training data points based on a specific distance metric. Therfore, kNN is 'data as model'. That is to say, a nKK model is merely the remembered training data itself. k is a major hyperparameter in a kNN classifier. k could be chosen via cross-validation (CV).
 
