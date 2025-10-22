@@ -58,7 +58,9 @@ torch.cuda.is_available()
 
 to see whether you already have an NVIDIA GPU to go.
 
-Besides float64, float32 and float16, recent there have been bfloat 16, fp8 and its variant. What's the difference between float16 and bfloat16? The float16 is 'half precision'. The too low precision will cause instability in training. In the vanilla float16, 0-9 elements store fraction. 10-14 store exponent. The 15th element stores sign. The problem is then it provides limited dynamic ($2^{5}$ permutations). The bfloat16 adjusts it as: 0-6 (7 bits in total) as fraction, 7-14 as exponent and the 15th component as sign. The adjustment improves the dynamic. The shortened fraction might be an issue in science computing. But the precision is sufficient for deep learning as we could be a bit sloppy in deep learning. For storing optimizer states and parameters we still need float32. 
+Besides float64, float32 and float16, recent there have been bfloat 16, fp8 and its variant. What's the difference between float16 and bfloat16? The float16 is 'half precision'. The too low precision will cause instability in training. In the vanilla float16, 0-9 elements store fraction. 10-14 store exponent. The 15th element stores sign. The problem is then it provides limited dynamic ($2^{5}$ permutations). The bfloat16 adjusts it as: 0-6 (7 bits in total) as fraction, 7-14 as exponent and the 15th component as sign. The adjustment improves the dynamic. The shortened fraction might be an issue in science computing. But the precision is sufficient for deep learning as we could be a bit sloppy in deep learning. For storing optimizer states and parameters we still need float32.
+
+### Lecture 3: Architectures, hyperparameters ###
 
 ## Assignments ##
 
