@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Building AI agents in details using frameworks"
-date:   2025-09-28 11:12:33 +0800
+title:  "Building AI agent basics in details using frameworks"
+date:   2025-09-28 11:12:33 +0200
 categories: AI
 ---
 

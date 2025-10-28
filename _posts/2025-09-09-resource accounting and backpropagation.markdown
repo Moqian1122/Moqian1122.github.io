@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Resource accounting and backpropagation"
-date:   2025-09-09 21:03:11 +0800
+date:   2025-09-09 21:03:11 +0200
 categories: Neural Networks, LLM
 ---
 
